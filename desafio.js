@@ -36,7 +36,7 @@ if (metodoDePagamento == 1 || metodoDePagamento == 2){
     // const precoFinalCartao = precoProduto + precoProduto * 0.10
     // alert(`O preço final do pagamento em cartão é ${precoFinalCartao}`)
     const precoFinalCartao = precoProduto * 1.1
-    alert(`O preço final do pagamento em cartão é ${precoFinalCartao}`)
+    alert(`O preço final do pagamento em cartão é ${precoFinalCartao.toFixed(2)}`)
   }
 }
 
