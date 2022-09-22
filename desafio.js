@@ -8,15 +8,26 @@
 // 3 Em duas vezes, preço normal de etiqueta sem juros
 // 4 Em três vezes, preço normal de etiqueta mais juros de 10%
 
-const precoProduto = parseFloat(prompt('Qual o preço do produto?'))
+let precoProduto = parseFloat(prompt('Qual o preço do produto?'))
 
-const mensagem = `
+while (isNaN(precoProduto) || precoProduto <= 0){
+  alert('Informe um valor válido e sem caracter especial!')
+  precoProduto = parseFloat(prompt('Qual o preço do produto?'))
+}
+
+
+let mensagem = `
 Informe o método de pagamento:
-Digite 1 para pagamento em dinheiro
-Digite 2 para pagamento em cheque
-Digite 3 para pagamento com cartão`
+Digite 1 para pagamento em dinheiro (10% de desconto)
+Digite 2 para pagamento em cheque (10% de desconto)
+Digite 3 para pagamento com cartão` 
 
-const metodoDePagamento = prompt(mensagem)
+let metodoDePagamento = parseInt(prompt(mensagem))
+
+while (isNaN(metodoDePagamento) || metodoDePagamento < 1 || metodoDePagamento > 3) {
+ alert('Forma de pagamento inválida!')
+ metodoDePagamento = parseInt(prompt(mensagem))
+}
 
 console.log(precoProduto)
 console.log(metodoDePagamento)
@@ -25,7 +36,10 @@ if (metodoDePagamento == 1 || metodoDePagamento == 2){
  const precoFinal = precoProduto * 0.9
  alert(`O preço final do pagamento é ${precoFinal}`)
 } else if (metodoDePagamento == 3) {
-  const parcelas = parseInt(prompt('Informe a quantidade de parcelas:'))
+  const parcelas = parseInt(prompt(`Informe a quantidade de parcelas:
+  (1x 15% de desconto)
+  (2x valor da etiqueta)
+  (3x 10% de juros)`))
   if (parcelas == 1) {
     const precoFinalCartao = precoProduto * 0.85
     alert(`O preço final do pagamento em cartão é ${precoFinalCartao}`)
@@ -38,6 +52,7 @@ if (metodoDePagamento == 1 || metodoDePagamento == 2){
     const precoFinalCartao = precoProduto * 1.1
     alert(`O preço final do pagamento em cartão é ${precoFinalCartao.toFixed(2)}`)
   }
+  alert('Obrigado pela preferência!!')
 }
 
 
