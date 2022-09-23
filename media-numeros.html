@@ -8,8 +8,16 @@
 </head>
 <body>
   <script>
+    let soma = 0
+    let num
     let quantidade = parseInt(prompt('Você deseja fazer a média de quantos números?'))
-    let num = parseInt(prompt(`Informe ${quantidade} valores de números`))    
+    for(i = 1; i <= quantidade; i++) {
+      num = parseInt(prompt(`Informe ${quantidade} valores de números`))    
+      soma = soma + num
+    }
+    let media = soma / quantidade
+    // console.log(media)
+    document.write(`<p>A média de ${quantidade} de números é : ${media}</p>`)
   </script>
 </body>
 </html>
