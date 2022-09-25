@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const num = []
+    const numEven = []
+    const numOdd = []
+    for (i = 0; i < 6; i++){
+      num[i] = parseInt(prompt('Informe seis números:'))
+    
+      if (num[i] % 2 == 0){
+        numEven[i] = num[i]
+        
+      } else {
+        numOdd[i] = num[i]
+      }
+    }
+    document.write(`Qtd de números Pares: ${numEven.length} e os números são: ${numEven}
+    
+    Qtd de números Ímpares: ${numOdd.length} e os números são: ${numOdd}`)
+                   
+    
+  </script>
+</body>
+</html>
