@@ -8,24 +8,26 @@
 </head>
 <body>
   <script>
-    const num = []
-    const numEven = []
-    const numOdd = []
-    for (i = 0; i < 6; i++){
-      num[i] = parseInt(prompt('Informe seis números:'))
+    const nums = []
+   
+    for (i = 1; i <= 6; i++){
+      const n = parseInt(prompt(`Informe o ${i}° número: `))
+      nums.push(n)
+    }
+
+    const pares = []
+    const impares = []
     
-      if (num[i] % 2 == 0){
-        numEven[i] = num[i]
-        
+    for ( let numero of nums) {
+      if (numero % 2 == 0){
+        pares.push(numero)
       } else {
-        numOdd[i] = num[i]
+        impares.push(numero)
       }
     }
-    document.write(`Qtd de números Pares: ${numEven.length} e os números são: ${numEven}
     
-    Qtd de números Ímpares: ${numOdd.length} e os números são: ${numOdd}`)
-                   
-    
+    alert(`Nós temos ${pares.length} valores pares: ${pares.join(', ')}`)
+    alert(`Nós temos ${impares.length} valores ímpares: ${impares.join(', ')}`)
   </script>
 </body>
 </html>
