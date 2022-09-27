@@ -1,0 +1,56 @@
+<!-- Crie um algortimo que recebe informações de 15 produtos. 
+  
+    Cada produto possui nome, marca, uma foto (link de uma imagem da internet), preço unitário e a quantidade de produtos em estoque. 
+    
+    Ao receber essas informações dos produtos, imprima no HTML essas informações de cada produto 
+    
+    e o produto entre o preço e a quantidade de produtos em estoque (preço total). -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <script>
+
+        let produtos = []
+        
+        let produto = {
+          nome: '',
+          marca: '',
+          foto: '',
+          preco: '',
+          qtd: '',
+          precoTotal: ''
+        }
+          
+          
+          for (let i = 1; i <= 2; i++){
+            produto.nome = (prompt(`Informe o nome do ${i}° produto`)) 
+            produto.marca = (prompt(`Informe a marca do ${i}° produto`))
+            produto.foto = (prompt(`Poste uma foto (link) do ${i}° produto`))
+            produto.preco = (parseFloat(prompt(`Informe o preço unitário do ${i}° produto`)))
+            produto.qtd = (parseInt(prompt(`Informe a quantidade do ${i}° produto`)))
+            produto.precoTotal = (produto.preco * produto.qtd)
+            produtos.push = (produto)
+         
+
+          document.write(`<p> NOME DO ${i}° PRODUTO: ${produto.nome} </p>`)
+          document.write(`<p> MARCA DO ${i}° PRODUTO: ${produto.marca} </p>`)
+          document.write(`<img src="${produto.foto}">`)
+          document.write(`<p> PREÇO DO ${i}° PRODUTO: ${produto.preco} </p>`)
+          document.write(`<p> QUANTIDADE EM ESTOQUE DO ${i}° PRODUTO: ${produto.qtd} </p>`)
+          document.write(`<p> TOTAL DE R$ EM ESTOQUE DO ${i}° PRODUTO: ${produto.precoTotal} </p>`)
+        
+
+          }
+
+        
+      </script>
+    </body>
+    </html>
