@@ -14,10 +14,19 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
+      <link rel="stylesheet" href="./css/quinze-produtos.css">
     </head>
+    
+    
+   
+    
+    
     <body>
-      <script>
 
+      <h1>Selecione 15 produtos</h1>
+    
+      <script>
+        
         let produtos = []
         
         let produto = {
@@ -42,7 +51,7 @@
 
           document.write(`<p> NOME DO ${i}° PRODUTO: ${produto.nome} </p>`)
           document.write(`<p> MARCA DO ${i}° PRODUTO: ${produto.marca} </p>`)
-          document.write(`<img src="${produto.foto}">`)
+          document.write(`<img src="${produto.foto}" width="300">`)
           document.write(`<p> PREÇO DO ${i}° PRODUTO: ${produto.preco} </p>`)
           document.write(`<p> QUANTIDADE EM ESTOQUE DO ${i}° PRODUTO: ${produto.qtd} </p>`)
           document.write(`<p> TOTAL DE R$ EM ESTOQUE DO ${i}° PRODUTO: ${produto.precoTotal} </p>`)
@@ -52,5 +61,6 @@
 
         
       </script>
+        
     </body>
     </html>
